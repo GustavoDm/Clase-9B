@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1524184954 source:d:\gustavodm\clase 9\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Producto.h"
+
+1524184921 d:\gustavodm\clase 9\producto.h
+
+1524185434 source:d:\gustavodm\clase 9\producto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Producto.h"
+
+1524519641 source:c:\users\liliana\desktop\programacion\clase-9-master\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"Producto.h"
+
+1524519349 c:\users\liliana\desktop\programacion\clase-9-master\producto.h
+
+1524518670 source:c:\users\liliana\desktop\programacion\clase-9-master\producto.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Producto.h"
+
