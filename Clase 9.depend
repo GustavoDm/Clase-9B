@@ -12,15 +12,15 @@
 	<string.h>
 	"Producto.h"
 
-1524519641 source:c:\users\liliana\desktop\programacion\clase-9-master\main.c
+1524670215 source:c:\users\liliana\desktop\programacion\clase-9-master\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	"Producto.h"
 
-1524519349 c:\users\liliana\desktop\programacion\clase-9-master\producto.h
+1524669192 c:\users\liliana\desktop\programacion\clase-9-master\producto.h
 
-1524518670 source:c:\users\liliana\desktop\programacion\clase-9-master\producto.c
+1524670012 source:c:\users\liliana\desktop\programacion\clase-9-master\producto.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

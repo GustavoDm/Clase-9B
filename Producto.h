@@ -22,4 +22,7 @@ int imprimirListaProducto(EProducto productos[], int size);
 
 int buscadorID(EProducto *productos, int ID, int size, int *resultadoIndice);
 
+int modificarProducto(EProducto *productos, int size, int ID);
+
+int borrarProducto(EProducto *productos, int size, int ID);
 #endif // PRODUCTO_H_INCLUDED

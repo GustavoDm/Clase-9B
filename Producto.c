@@ -41,7 +41,9 @@ int cargaProducto(EProducto productos[], int indice, int size)
    productos[indice].precio=auxPrecioF;
    productos[indice].flagCargaProducto=0;
    productos[indice].ID=indice;
-   productos[indice].indice=indice;
+   productos[indice].indice=indice+1;
+
+   printf("%d", productos[indice].indice);
 
 
 
@@ -87,6 +89,7 @@ int imprimirListaProducto(EProducto productos[], int size)
 
 int buscadorID(EProducto *productos, int ID, int size, int *resultadoIndice)
 {
+
     int i;
     int retorno=-1;
     for(i=0;i<size;i++){
@@ -97,4 +100,54 @@ int buscadorID(EProducto *productos, int ID, int size, int *resultadoIndice)
 
     }
     return retorno;
+}
+
+int modificarProducto(EProducto *productos, int size, int ID){
+
+int i;
+int retorno=-1;
+for(i=0;i<size;i++){
+if(productos[i].flagCargaProducto==0&&productos[i].ID==ID){
+
+   char auxNombre[50];
+   char auxDescripcion[200];
+   char auxPrecio[50];
+   float auxPrecioF;
+
+   printf("\nIngrese el nombre del producto: ");             //VALIDAR
+   fgets(auxNombre, sizeof(auxNombre), stdin);             //VALIDAR
+   fflush(stdin);                                          //VALIDAR
+   auxNombre[strlen(auxNombre)-1]=0;                       //VALIDAR
+   printf("\nIngrese una descripcion del producto: ");     //VALIDAR
+   fgets(auxDescripcion, sizeof(auxDescripcion), stdin);   //VALIDAR
+   fflush(stdin);                                          //VALIDAR
+   auxDescripcion[strlen(auxDescripcion)-1]=0;             //VALIDAR
+   printf("\nIngrese el precio del producto: ");           //VALIDAR
+   fgets(auxPrecio, sizeof(auxNombre), stdin);             //VALIDAR
+   fflush(stdin);                                          //VALIDAR
+   auxPrecio[strlen(auxPrecio)-1]=0;                       //VALIDAR
+   auxPrecioF= atof(auxPrecio);                            //VALIDAR
+
+   strcpy(productos[i].nombre, auxNombre);
+   strcpy(productos[i].descripcion, auxDescripcion);
+   productos[i].precio=auxPrecioF;
+   retorno=0;
+}
+}
+return retorno;
+}
+
+int borrarProducto(EProducto *productos, int size, int ID){
+
+int i;
+int retorno=-1;
+
+for(i=0;i<size;){
+if(productos[i].flagCargaProducto==0&&productos[i].ID==ID){
+    productos[i].flagCargaProducto=-1;
+    retorno=0;
+}
+}
+
+return retorno;
 }
